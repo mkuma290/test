@@ -1,0 +1,82 @@
+
+problem 1
+
+1.Verify that the Registration form contains Username, Full name, Password, Email Id, Phone number, Terms of use, Register.
+
+2.Verify that tab functionality is working properly or not.
+
+3.Verify that Enter/Tab key works as a substitute for the Register button.
+
+4.Verify that all the fields such as fullname, Password and other fields have a valid placeholder.
+
+5.Verify that the labels float upward when the text field is in focus or filled (In case of floating label).
+
+6.Verify that all the required/mandatory fields are marked with * against the field.
+
+7.Verify that clicking on Register button after entering all the mandatory fields.
+
+8.Verify that system generates a validation message when clicking on register button without filling all the mandatory fields.
+
+9.Verify that entering blank spaces on mandatory fields lead to validation error
+
+10.Verify that clicking on register button by leaving optional fields, submits the data to the server without any validation error.
+
+11.Verify that case sensitivity of fullname (usually Username field should not follow case sensitivity – ‘manish’ & ‘MANISH’ acts same).
+
+12.Verify that system generates a validation message when entering existing username
+
+11.verify that the character limit in all the fields (mainly username and password) based on business requirement.
+
+12.verify that the username validation as per business requirement (in some application, username should not allow numeric and special characters).
+
+13.verify that the validation of all the fields are as per business requirement.
+
+14.Verify that the validation of email field by entering incorrect email id.
+
+15.Verify that the validation of numeric fields by entering alphabets and characters
+
+16.Verify that leading and trailing spaces are trimmed after clicking on register button.
+
+17.Verify that the “terms and conditions” checkbox is unselected by default.
+
+18.Verify that the validation message is displayed when clicking on register button without selecting “terms and conditions” checkbox.
+
+19.Verify that the password is in encrypted form when entered
+
+
+problem 2
+
+import java.util.Scanner;
+import java.util.*;
+class Problem2{
+public static void main(String args[])
+{
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int x=sc.nextInt();
+    int y=sc.nextInt();
+    int t=sc.nextInt();
+    List<Integer> A = new ArrayList<Integer>(); 
+    List<Integer> B = new ArrayList<Integer>(); 
+    for(int i=x;i<=n;i=i+x)
+    {
+        A.add(i) ; 
+    }
+     for(int i=y;i<=n;i=i+y)
+    {
+        B.add(i) ; 
+    }
+     System.out.println(A.toString());
+     System.out.println(B.toString());
+     for(int i=0;i<A.size();i++)
+     {
+         for(int j=0;j<B.size();j++)
+         {
+             if(A.get(i)+B.get(j)==t)
+             {
+               System.out.println(A.get(i)+","+B.get(j));  
+             }
+         }
+     }
+}
+}
